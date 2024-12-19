@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Client</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+
+<body class="bg-gradient-to-br from-green-100 to-green-300 min-h-screen">
+  <div class="container mx-auto px-4">
+    <header class="mb-10">
+      <nav class="bg-white shadow-lg rounded-lg overflow-hidden py-2 px-4">
+        <div class="flex justify-between flex-row items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <h1 class="text-2xl font-bold text-green-700">MyApp</h1>
+          </div>
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8 bg-gray-200 rounded-md">
+            <a href="/" class="text-black hover:text-green-500 px-3 py-2 text-sm font-medium flex items-center">
+              <i data-feather="home" class="mr-2 h-4 w-4"></i>Home
+            </a>
+            <a href="/articles" class="text-black hover:text-green-500 px-3 py-2 text-sm font-medium flex items-center">
+              <i data-feather="briefcase" class="mr-2 h-4 w-4"></i>Articles
+            </a>
+            <a href="/clients" class="text-black hover:text-green-500 px-3 py-2 text-sm font-medium flex items-center">
+              <i data-feather="users" class="mr-2 h-4 w-4"></i>Clients
+            </a>
+            <a href="/dettes" class="text-black hover:text-green-500 px-3 py-2 text-sm font-medium flex items-center">
+              <i data-feather="dollar-sign" class="mr-2 h-4 w-4"></i>Dettes
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="bg-white shadow-2xl rounded-xl overflow-hidden">
+      <div class="px-6 py-8">
+        <h2 class="text-3xl font-extrabold text-gray-800 flex items-center mb-6">
+          <i data-feather="user-plus" class="mr-4 text-green-500 h-8 w-8"></i>
+          Add Client
+        </h2>
+
+        <form id="client-form" class="space-y-6">
+          <div>
+            <label for="nom" class="block text-sm font-medium text-gray-700">Name</label>
+            <input type="text" id="nom" name="nom" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" required>
+          </div>
+
+          <div>
+            <label for="telephone" class="block text-sm font-medium text-gray-700">Telephone</label>
+            <input type="text" id="telephone" name="telephone" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" required>
+          </div>
+
+          <div>
+            <label for="addresse" class="block text-sm font-medium text-gray-700">Address</label>
+            <input type="text" id="addresse" name="addresse" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" required>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" required>
+          </div>
+
+          <div class="flex items-center">
+            <input id="creerCompte" name="creerCompte" type="checkbox" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+            <label for="creerCompte" class="ml-2 block text-sm font-medium text-gray-700">Create User Account</label>
+          </div>
+
+          <div id="user-fields" class="hidden space-y-6">
+            <div>
+              <label for="login" class="block text-sm font-medium text-gray-700">Login</label>
+              <input type="text" id="login" name="login" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm">
+            </div>
+
+            <div>
+              <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+              <input type="password" id="password" name="password" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm">
+            </div>
+          </div>
+
+          <div>
+            <button type="submit" class="w-full bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition duration-300">
+              Add Client
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Initialize Feather icons
+    feather.replace();
+  </script>
+  <script src="../../js/client/form.js"></script>
+</body>
+
+</html>

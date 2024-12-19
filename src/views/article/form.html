@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Article</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+
+<body class="bg-gradient-to-br from-green-100 to-green-300 min-h-screen">
+    <div class="container mx-auto px-4">
+        <header class="mb-10">
+            <nav class="bg-white shadow-lg rounded-lg overflow-hidden py-2 px-4">
+                <div class="flex justify-between flex-row items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-2xl font-bold text-green-700">MyApp</h1>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8 bg-gray-200 rounded-md">
+                        <a href="/"
+                            class="text-black hover:text-green-500 px-3 py-2 text-sm font-medium flex items-center">
+                            <i data-feather="home" class="mr-2 h-4 w-4"></i>Home
+                        </a>
+                        <a href="/articles"
+                            class="text-black hover:text-green-500 px-3 py-2 text-sm font-medium flex items-center">
+                            <i data-feather="briefcase" class="mr-2 h-4 w-4"></i>Articles
+                        </a>
+                        <a href="/clients"
+                            class="text-black hover:text-green-500 px-3 py-2 text-sm font-medium flex items-center">
+                            <i data-feather="users" class="mr-2 h-4 w-4"></i>Clients
+                        </a>
+                        <a href="/dettes"
+                            class="text-black hover:text-green-500 px-3 py-2 text-sm font-medium flex items-center">
+                            <i data-feather="dollar-sign" class="mr-2 h-4 w-4"></i>Dettes
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="bg-white shadow-2xl rounded-xl overflow-hidden">
+            <div class="px-6 py-8">
+                <!-- <div class="bg-white shadow-2xl rounded-xl overflow-hidden"> -->
+                <div class="px-6 py-8">
+                    <div class="flex items-center mb-6">
+                        <i data-feather="plus-circle" class="mr-4 text-green-500 h-10 w-10"></i>
+                        <h1 class="text-3xl font-extrabold text-gray-800">Add New Article</h1>
+                    </div>
+
+                    <form id="article-form" class="space-y-6">
+                        <div>
+                            <label for="libelle" class="block text-sm font-medium text-gray-700 mb-2">
+                                Article Name
+                                <span class="text-red-500 ml-1">*</span>
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i data-feather="tag" class="h-5 w-5 text-gray-400"></i>
+                                </div>
+                                <input type="text" id="libelle" name="libelle" required
+                                    class="pl-10 w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                    placeholder="Enter article name">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="prix" class="block text-sm font-medium text-gray-700 mb-2">
+                                Price
+                                <span class="text-red-500 ml-1">*</span>
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i data-feather="dollar-sign" class="h-5 w-5 text-gray-400"></i>
+                                </div>
+                                <input type="number" id="prix" name="prix" step="0.01" required
+                                    class="pl-10 w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                    placeholder="Enter price">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="qteStock" class="block text-sm font-medium text-gray-700 mb-2">
+                                Stock Quantity
+                                <span class="text-red-500 ml-1">*</span>
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i data-feather="layers" class="h-5 w-5 text-gray-400"></i>
+                                </div>
+                                <input type="number" id="qteStock" name="qteStock" required
+                                    class="pl-10 w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                    placeholder="Enter stock quantity">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <a href="/articles" class="text-gray-600 hover:text-gray-800 flex items-center">
+                                <i data-feather="arrow-left" class="mr-2 h-5 w-5"></i>
+                                Back to Articles
+                            </a>
+                            <button type="submit"
+                                class="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 transition duration-300 flex items-center">
+                                <i data-feather="save" class="mr-2 h-5 w-5"></i>
+                                Add Article
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- </div> -->
+
+                <div id="form-feedback" class="mt-4 text-center">
+                    <!-- Feedback messages will be displayed here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Initialize Feather icons
+        feather.replace();
+    </script>
+    <script src="../../js/article/form.js"></script>
+</body>
+
+</html>

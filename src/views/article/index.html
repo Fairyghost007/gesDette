@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Management</title>
+    <link href="../../css/output.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="bg-gradient-to-br from-green-100 to-green-300 min-h-screen">
+    <div class="container mx-auto px-4">
+        <header class="mb-10">
+            <nav class="bg-white shadow-lg rounded-lg overflow-hidden py-2 px-4">
+                <!-- <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between h-16"> -->
+                        <div class="flex justify-between flex-row items-center">
+                            <div class="flex-shrink-0 flex items-center">
+                                <h1 class="text-2xl font-bold text-green-700">MyApp</h1>
+                            </div>
+                            <div class="hidden sm:ml-6 sm:flex sm:space-x-8 bg-gray-200 rounded-md">
+                                <a href="/" class="text-black hover:text-green-500 px-3 py-2 text-sm font-medium flex items-center">
+                                    <i data-feather="home" class="mr-2 h-4 w-4"></i>Home
+                                </a>
+                                <a href="/articles" class="text-black hover:text-green-500 px-3 py-2 text-sm font-medium flex items-center">
+                                    <i data-feather="briefcase" class="mr-2 h-4 w-4"></i>Articles
+                                </a>
+                                <a href="/clients" class="text-black hover:text-green-500 px-3 py-2 text-sm font-medium flex items-center">
+                                    <i data-feather="users" class="mr-2 h-4 w-4"></i>Clients
+                                </a>
+                                <a href="/dettes" class="text-black hover:text-green-500 px-3 py-2 text-sm font-medium flex items-center">
+                                    <i data-feather="dollar-sign" class="mr-2 h-4 w-4"></i>Dettes
+                                  </a>
+                            </div>
+                        </div>
+                    <!-- </div>
+                </div> -->
+            </nav>
+        </header>
+
+        <main class="bg-white shadow-2xl rounded-xl overflow-hidden">
+            <div class="px-6 py-8">
+                <div class="flex justify-between items-center mb-6">
+                    
+                    <h2 class="text-3xl font-extrabold text-gray-800 flex items-center">
+                        <i data-feather="briefcase" class="mr-4 text-green-500 h-8 w-8"></i>
+                        Article Management
+                    </h2>
+                    <div class="flex items-center space-x-4">
+                        <input type="text" placeholder="Search articles..." class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition duration-300 flex items-center">
+                            <i data-feather="search" class="mr-2 h-4 w-4"></i>Search
+                        </button>
+                        <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                            <a href="/article/store" class="bg-green-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-600 transition duration-300 flex items-center">
+                                <i data-feather="plus-circle" class="mr-2 h-4 w-4"></i>Add Article
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-gray-500">
+                        <thead class="text-xs text-gray-700 uppercase bg-green-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">ID</th>
+                                <th scope="col" class="px-6 py-3">Libelle</th>
+                                <th scope="col" class="px-6 py-3">Prix</th>
+                                <th scope="col" class="px-6 py-3">Quantité en Stock</th>
+                                <!-- <th scope="col" class="px-6 py-3">Actions</th> -->
+                            </tr>
+                        </thead>
+                        <tbody id="articles-table" class="bg-white">
+                            <!-- Dynamic content will be added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Initialize Feather icons
+        feather.replace();
+    </script>
+    <script src="../../js/article/index.js"></script>
+</body>
+</html>
